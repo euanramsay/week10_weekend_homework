@@ -13,4 +13,8 @@ describe('Record', function() {
     assert.equal("REM", record.artist);
   });
 
+  it("record should have a title", function() {
+    assert.equal("Monster", record.title);
+  });
+
 });
