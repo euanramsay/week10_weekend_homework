@@ -4,6 +4,12 @@ var Store = function(name, city) {
   this.inventory = [];
 };
 
+Store.prototype = {
+  uniqueRecordCount: function() {
+    return this.inventory.length;
+  }
+};
+
 
 
 module.exports = Store;

@@ -17,4 +17,8 @@ describe('Store', function() {
     assert.equal("Glasgow", store.city);
   });
 
+  it("record store should start with no records in inventory", function(){
+    assert.equal(0, store.uniqueRecordCount());
+  });
+
 });
