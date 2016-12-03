@@ -38,6 +38,11 @@ describe('Store', function() {
     store.addRecord(recordStub2);
     store.addRecord(recordStub3);
     assert.equal(3, store.uniqueRecordCount());
-  } );
+  });
+
+  it("should be able to add cash to balance", function(){
+    store.addCashToBalance(1000);
+    assert.equal(1000, store.balance);
+  });
 
 });
