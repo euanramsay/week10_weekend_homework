@@ -7,6 +7,9 @@ var Store = function(name, city) {
 Store.prototype = {
   uniqueRecordCount: function() {
     return this.inventory.length;
+  },
+  addRecord: function(record) {
+    this.inventory.push(record);
   }
 };
 
