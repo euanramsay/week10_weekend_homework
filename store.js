@@ -15,6 +15,9 @@ Store.prototype = {
   addCashToBalance: function(amount) {
     this.balance += amount;
   }
+  // listInventory: function() {
+  //   this.inventory.forEach(console.log(item.title " by " item.artist));
+  // }
 };
 
 

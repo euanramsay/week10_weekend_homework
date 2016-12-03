@@ -40,6 +40,10 @@ describe('Store', function() {
     assert.equal(3, store.uniqueRecordCount());
   });
 
+  it("store should start with zero balance", function(){
+    assert.equal(0, store.balance);
+  });
+
   it("should be able to add cash to balance", function(){
     store.addCashToBalance(1000);
     assert.equal(1000, store.balance);

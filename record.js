@@ -4,6 +4,13 @@ var Record = function(artist, title, price) {
   this.price = price;
 };
 
+Record.prototype = {
+  returnRecordListing: function() {
+    return this.title + " by " + this.artist + " - £" + this.price;
+  } 
+
+};
+
 
 
 module.exports = Record;
