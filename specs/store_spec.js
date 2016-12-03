@@ -8,7 +8,7 @@ var recordStub3;
 
 describe('Store', function() {
 
-  before(function() {
+  beforeEach(function() {
     recordStub1 = {artist: "REM", title: "Monster", price: 19.95};
     recordStub2 = {artist: "Green Day", title: "Dookie", price: 17.95};
     recordStub3 = {artist: "Weezer", title: "Blue Album", price: 22.95};;
@@ -32,5 +32,12 @@ describe('Store', function() {
     store.addRecord(recordStub1);
     assert.equal(1, store.uniqueRecordCount());
   });
+
+  it("should be able to have multiple records in inventory", function(){
+    store.addRecord(recordStub1);
+    store.addRecord(recordStub2);
+    store.addRecord(recordStub3);
+    assert.equal(3, store.uniqueRecordCount());
+  } );
 
 });
