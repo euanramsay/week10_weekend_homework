@@ -6,18 +6,32 @@ var Store = function(name, city) {
 };
 
 Store.prototype = {
+
   uniqueRecordCount: function() {
     return this.inventory.length;
   },
+
   addRecord: function(record) {
     this.inventory.push(record);
   },
+
   addCashToBalance: function(amount) {
     this.balance += amount;
-  }
+  },
+
   // listInventory: function() {
-  //   this.inventory.forEach(console.log(item.title " by " item.artist));
-  // }
+  //   this.inventory.forEach(function(entry){
+  //     return entry.title + " by " + entry.artist + " - £" + entry.price;
+  //   });
+  // },
+
+  findRecord: function(recordTitle) {
+    var foundRecord = this.inventory.find(function(record) {
+      return record.title === recordTitle;
+    });
+    return foundRecord
+  }
+
 };
 
 

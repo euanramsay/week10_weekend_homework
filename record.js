@@ -5,6 +5,7 @@ var Record = function(artist, title, price) {
 };
 
 Record.prototype = {
+  
   returnRecordListing: function() {
     return this.title + " by " + this.artist + " - £" + this.price;
   } 
