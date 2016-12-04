@@ -19,13 +19,13 @@ Store.prototype = {
     this.balance += amount;
   },
 
-  // listInventory: function() {
-  //   var listing;
-  //   this.inventory.forEach(function(record){
-  //     listing += record;
-  //   });
-  //   return listing
-  // },
+  listInventory: function() {
+    var listing = [];
+    this.inventory.forEach(function(record){
+      listing += record.title + " by " + record.artist + " - £" + record.price;
+    });
+    return listing
+  },
 
   findRecord: function(recordTitle) {
     var foundRecord = this.inventory.find(function(record) {

@@ -49,10 +49,10 @@ describe('Store', function() {
     assert.equal(1000, store.balance);
   });
 
-  // it("should be able to print listing of all records in inventory", function(){
-  //   store.addRecord(recordStub1);
-  //   console.log(store.listInventory());
-  // });
+  it("should be able to print listing of all records in inventory", function(){
+    store.addRecord(recordStub1);
+    assert.equal("Monster by REM - £19.95", store.listInventory());
+  });
 
   it("should be ale to find a record by its title", function(){
     store.addRecord(recordStub1);
