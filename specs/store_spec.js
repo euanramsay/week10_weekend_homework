@@ -51,8 +51,7 @@ describe('Store', function() {
 
   // it("should be able to print listing of all records in inventory", function(){
   //   store.addRecord(recordStub1);
-  //   console.log(store.inventory);
-  //   assert.equal("Monster by REM - £19.95", store.listInventory());
+  //   console.log(store.listInventory());
   // });
 
   it("should be ale to find a record by its title", function(){
@@ -60,6 +59,12 @@ describe('Store', function() {
     store.addRecord(recordStub2);
     store.addRecord(recordStub3);
     assert.equal(recordStub1, store.findRecord("Monster"));
+  });
+
+  it("should be able to sell record", function(){
+    store.addRecord(recordStub1);
+    store.sellRecord("Monster");
+    assert.equal(19.95, store.balance)
   });
 
 });

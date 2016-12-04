@@ -20,9 +20,11 @@ Store.prototype = {
   },
 
   // listInventory: function() {
-  //   this.inventory.forEach(function(entry){
-  //     return entry.title + " by " + entry.artist + " - £" + entry.price;
+  //   var listing;
+  //   this.inventory.forEach(function(record){
+  //     listing += record;
   //   });
+  //   return listing
   // },
 
   findRecord: function(recordTitle) {
@@ -30,6 +32,11 @@ Store.prototype = {
       return record.title === recordTitle;
     });
     return foundRecord
+  },
+
+  sellRecord: function(recordTitle) {
+    var record = this.findRecord(recordTitle);
+    this.balance += record.price;
   }
 
 };
