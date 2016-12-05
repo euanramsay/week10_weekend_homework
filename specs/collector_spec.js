@@ -13,4 +13,8 @@ describe('Collector', function() {
     assert.equal("David Geffen", collector.name);
   });
 
+  it("record collector should have money", function(){
+    assert.equal(2500, collector.money);
+  });
+
 });
