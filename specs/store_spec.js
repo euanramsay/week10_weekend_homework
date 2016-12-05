@@ -67,4 +67,11 @@ describe('Store', function() {
     assert.equal(19.95, store.balance)
   });
 
+  it("should be able to return total value of inventory", function(){
+    store.addRecord(recordStub1);
+    store.addRecord(recordStub2);
+    store.addRecord(recordStub3);
+    assert.equal(60.85, store.inventoryValueTotal());
+  });
+
 });

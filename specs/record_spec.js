@@ -20,8 +20,9 @@ describe('Record', function() {
   it("record should have a price", function() {
     assert.equal(19.95, record.price);
   });
+  
   it("should be able to return record information in listing format", function(){
     assert.equal("Monster by REM - £19.95", record.returnRecordListing());
-  })
+  });
 
 });

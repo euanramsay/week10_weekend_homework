@@ -37,6 +37,13 @@ Store.prototype = {
   sellRecord: function(recordTitle) {
     var record = this.findRecord(recordTitle);
     this.balance += record.price;
+  },
+
+  inventoryValueTotal: function() {
+    var total = this.inventory.reduce(function(sum, record) {
+      return sum + record.price;
+    }, 0);
+    return total.toFixed(2);
   }
 
 };
