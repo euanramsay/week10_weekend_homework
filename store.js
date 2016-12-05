@@ -24,14 +24,14 @@ Store.prototype = {
     this.inventory.forEach(function(record){
       listing += record.title + " by " + record.artist + " - £" + record.price;
     });
-    return listing
+    return listing;
   },
 
   findRecord: function(recordTitle) {
     var foundRecord = this.inventory.find(function(record) {
       return record.title === recordTitle;
     });
-    return foundRecord
+    return foundRecord;
   },
 
   sellRecord: function(recordTitle) {
@@ -44,6 +44,10 @@ Store.prototype = {
       return sum + record.price;
     }, 0);
     return total.toFixed(2);
+  },
+
+  getFinancialReport: function() {
+    return "Total cash = £" + this.balance + ", total value of inventory = £" + this.inventoryValueTotal();
   }
 
 };

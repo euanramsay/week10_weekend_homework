@@ -22,7 +22,7 @@ describe('Record', function() {
   });
   
   it("should be able to return record information in listing format", function(){
-    assert.equal("Monster by REM - £19.95", record.returnRecordListing());
+    assert.equal("Monster by REM - £19.95", record.returnRecordListing())
   });
 
 });

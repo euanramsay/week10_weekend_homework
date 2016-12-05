@@ -11,7 +11,7 @@ describe('Store', function() {
   beforeEach(function() {
     recordStub1 = {artist: "REM", title: "Monster", price: 19.95};
     recordStub2 = {artist: "Green Day", title: "Dookie", price: 17.95};
-    recordStub3 = {artist: "Weezer", title: "Blue Album", price: 22.95};;
+    recordStub3 = {artist: "Weezer", title: "Blue Album", price: 22.95};
     store = new Store("Tower Records", "Glasgow");
 
   });
@@ -72,6 +72,14 @@ describe('Store', function() {
     store.addRecord(recordStub2);
     store.addRecord(recordStub3);
     assert.equal(60.85, store.inventoryValueTotal());
+  });
+
+  it("should be able to give financial report of store", function(){
+    store.addRecord(recordStub1);
+    store.addRecord(recordStub2);
+    store.addRecord(recordStub3);
+    store.sellRecord("Monster");
+    assert.equal("Total cash = £19.95, total value of inventory = £60.85", store.getFinancialReport());
   });
 
 });
